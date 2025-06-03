@@ -1,0 +1,151 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4222,        141]
+NotebookOptionsPosition[      3863,        127]
+NotebookOutlinePosition[      4268,        143]
+CellTagsIndexPosition[      4225,        140]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F1", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"10", 
+     SuperscriptBox["x", "2"]}], "-", 
+    RowBox[{"4", "x", " ", "y"}], "+", 
+    RowBox[{"7", 
+     SuperscriptBox["y", "2"]}], "-", 
+    RowBox[{"4", 
+     SqrtBox["5"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"5", "x"}], "-", "y"}], ")"}]}], "-", "16"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"F2", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", "y"}], ")"}], "2"], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "-", "1"}], ")"}], "2"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"F3", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"5", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["x", "2"], "-", "y"}], ")"}], "2"]}], "+", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "-", "1"}], ")"}], "2"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<D:/1/MOVI lab/lab5/lab5/DFPeps1f3p2.txt\>\"", ",", "\"\<Table\>\""}],
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"K", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ContourPlot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"F3", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], "==", 
+        RowBox[{"F3", "[", 
+         RowBox[{
+          RowBox[{"str", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", 
+          RowBox[{"str", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "2"}], "]"}], "]"}]}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "5.1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", "1.1", ",", 
+         RowBox[{"-", "4.1"}]}], "}"}], ",", 
+       RowBox[{"MaxRecursion", "->", "3"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "2", ",", 
+       RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"M", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Arrowheads", "[", "0.02", "]"}], ",", "Red", ",", 
+        RowBox[{"Thickness", "[", "Small", "]"}], ",", 
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"str", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"str", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "+", "1"}], "]"}], "]"}]}], "}"}], "]"}]}], "}"}], 
+      "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "2", ",", 
+       RowBox[{
+        RowBox[{"Length", "[", "str", "]"}], "-", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"K", ",", "M"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"str", "[", 
+  RowBox[{"[", "1", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"str", "[", 
+  RowBox[{"[", 
+   RowBox[{"Length", "[", "str", "]"}], "]"}], "]"}]}], "Input",ExpressionUUID\
+->"19c4cfbd-d241-4d9a-b04c-7faf4381d694"]
+},
+WindowSize->{569.25, 609.75},
+WindowMargins->{{429, Automatic}, {42, Automatic}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ccb9f487-5596-41e3-8ebb-0cbb0607fb99"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3301, 105, 413, "Input",ExpressionUUID->"19c4cfbd-d241-4d9a-b04c-7faf4381d694"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
